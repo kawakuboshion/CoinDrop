@@ -457,7 +457,6 @@ GameObject:
   - component: {fileID: 414025486}
   - component: {fileID: 414025485}
   - component: {fileID: 414025488}
-  - component: {fileID: 414025489}
   m_Layer: 5
   m_Name: NewGame_Button
   m_TagString: Untagged
@@ -531,7 +530,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 414025488}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnClickLoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -541,9 +540,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 414025489}
-        m_TargetAssemblyTypeName: NewGame, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 414025488}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: OnClickNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -603,19 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e31aee881e3a740bb933fdbd69b5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage
---- !u!114 &414025489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414025483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa2e2c52fd9f72940b731405e0f9f4e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  SceneName: Stage
 --- !u!1 &553262027
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +783,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 414025488}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnClickLoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -856,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e31aee881e3a740bb933fdbd69b5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage
+  SceneName: Stage
 --- !u!1 &720629263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,8 +1398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69a1dca873e9764ea258cd89bbcc377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coin: {fileID: 1586869032760753893, guid: d6acc9e8859848848896b4d1dd7b432c, type: 3}
-  distance: 1213.07
+  coin: {fileID: 1586869032760753893, guid: d6acc9e8859848848896b4d1dd7b432c, type: 3}
+  Distance: 5
 --- !u!114 &2100800609
 MonoBehaviour:
   m_ObjectHideFlags: 0

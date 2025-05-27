@@ -1370,8 +1370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29422da373b456249aa232b5941653ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOver_Text: {fileID: 297510571}
-  Coin_Text: {fileID: 1804783286}
+  gameOver_Text: {fileID: 297510571}
+  coin_Text: {fileID: 1804783286}
   IsGameOver: 0
 --- !u!114 &321030196
 MonoBehaviour:
@@ -1385,10 +1385,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8087088310c1f840867e994c8944ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coin: {fileID: 1586869032760753893, guid: d6acc9e8859848848896b4d1dd7b432c, type: 3}
-  CountCoin: {fileID: 321030195}
+  coin: {fileID: 1586869032760753893, guid: d6acc9e8859848848896b4d1dd7b432c, type: 3}
+  coinManager: {fileID: 321030195}
   CreatePosition: {x: -15, y: 10, z: -15}
-  distance: 0.005
+  Distance: 0.005
 --- !u!65 &321030197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3429,7 +3429,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 797681214}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnClickLoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e31aee881e3a740bb933fdbd69b5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Title
+  SceneName: Title
 --- !u!1001 &809021878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6335,8 +6335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa799b64cf788841b43539abaf80ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinPerent: {fileID: 1210987556}
-  distance: 0.01
+  coinParent: {fileID: 1210987556}
+  Distance: 0.015
 --- !u!65 &1514751454
 BoxCollider:
   m_ObjectHideFlags: 0

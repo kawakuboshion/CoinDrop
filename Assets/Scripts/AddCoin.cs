@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class AddCoin : MonoBehaviour
 {
-    [SerializeField] private GameObject Coin;
-    [SerializeField] private CountCoin CountCoin;
+    [SerializeField] private GameObject coin;
+    [SerializeField] private CoinManager coinManager;
     public Vector3 CreatePosition;
-    public float distance = 0.005f;
-    private float theta = 0;
+    public float Distance = 0.005f;
+    private float time = 0;
     void Update()
     {
-        CreatePosition.z += Mathf.Sin(theta) * distance;
-        if(Input.GetKeyDown(KeyCode.Space) && CountCoin.Coin > 0 && !CountCoin.IsGameOver)
+        CreatePosition.z += Mathf.Sin(time) * Distance;
+        if(Input.GetKeyDown(KeyCode.Space) && CoinManager.Coin > 0 && !coinManager.IsGameOver)
         {
-            Instantiate(Coin, CreatePosition, Quaternion.identity);
-            CountCoin.MinusCoin();
+            Instantiate(coin, CreatePosition, Quaternion.identity);
+            coinManager.MinusCoin();
             Debug.Log(CreatePosition);
         }
-        theta += Time.deltaTime;
+        time += Time.deltaTime;
     }
 }

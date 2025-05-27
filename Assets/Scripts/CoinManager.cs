@@ -4,30 +4,30 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CountCoin : MonoBehaviour
+public class CoinManager : MonoBehaviour
 {
-    [SerializeField] private GameObject GameOver_Text;
-    [SerializeField] private TextMeshProUGUI Coin_Text;
+    [SerializeField] private GameObject gameOver_Text;
+    [SerializeField] private TextMeshProUGUI coin_Text;
     public static int Coin = 5;
     public bool IsGameOver = false;
 
     private void Start()
     {
-        GameOver_Text.SetActive(false);
+        gameOver_Text.SetActive(false);
         IsGameOver = false;
-        StartCoroutine(GameOver());
+        StartCoroutine(GameOverMonitoring());
+        coin_Text.text = "Coin: " + Coin.ToString();
     }
 
-    private IEnumerator GameOver()
+    private IEnumerator GameOverMonitoring()
     {
         while (true)
         {
             if (Coin <= 0)
             {
-                GameOver_Text.SetActive(true);
+                gameOver_Text.SetActive(true);
                 IsGameOver = true;
                 yield return new WaitForSeconds(3f);
-                Coin = 5;
                 SceneManager.LoadScene("Title");
             }
             yield return null;
@@ -38,13 +38,13 @@ public class CountCoin : MonoBehaviour
         if(other.gameObject.tag == "Coin")
         {
             Coin++;
-            Coin_Text.text = Coin.ToString();
+            coin_Text.text = Coin.ToString();
         }
     }
 
     public void MinusCoin()
     {
         Coin--;
-        Coin_Text.text = Coin.ToString();
+        coin_Text.text = "Coin: " + Coin.ToString();
     }
 }
